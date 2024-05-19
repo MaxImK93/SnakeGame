@@ -38,6 +38,7 @@
     <Compile Include="ConsoleInput.cs" />
     <Compile Include="BaseGameLogic.cs" />
     <Compile Include="SnakeGameLogic.cs" />
+    <Compile Include="ConsoleRenderer.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

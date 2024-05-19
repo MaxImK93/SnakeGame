@@ -10,19 +10,35 @@ namespace SnakeGame
 
         public SnakeDir currentDir;
 
-        public float timeToMove; 
+        public float timeToMove;
+
+        public int fieldWidth;
+        public int fieldHeight;
+
+        private int middleY;
+        private int middleX;
+
+        private const char symbol = '@';
 
         public SnakeGameplayState()
         {
+        }
+
+        public override void Draw(ConsoleRenderer renderer)
+        {
+            renderer.SetPixel(middleX, middleY, symbol, 0);
         }
 
         public override void Reset()
         {
             Body.Clear();
 
+            middleY = fieldHeight / 2;
+            middleX = fieldWidth / 2; 
+
             currentDir = SnakeDir.Up;
 
-            Body.Add(new Cell(0,0));
+            Body.Add(new Cell(middleX,middleY));
 
             timeToMove = 0; 
         }
@@ -50,11 +66,6 @@ namespace SnakeGame
             Body.Insert(0, nextCell);
 
             nextCell = Body[0];
-
-            if (Body.Count > 0)
-            {
-                Console.WriteLine($"Значение нулевого элемента в Body: {Body[0]}");
-            }
 
         }
 

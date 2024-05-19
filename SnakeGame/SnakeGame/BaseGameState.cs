@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace SnakeGame
 {
     public abstract class BaseGameState
@@ -6,6 +7,8 @@ namespace SnakeGame
         public abstract void Update(float deltaTime);
 
         public abstract void Reset();
+
+        public abstract void Draw(ConsoleRenderer renderer);
 
     }
 }
