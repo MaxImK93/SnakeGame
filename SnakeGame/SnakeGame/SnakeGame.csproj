@@ -29,6 +29,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="Microsoft.Bcl.HashCode">
+      <HintPath>packages\Microsoft.Bcl.HashCode.1.1.1\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
@@ -38,6 +42,10 @@
     <Compile Include="ConsoleInput.cs" />
     <Compile Include="BaseGameLogic.cs" />
     <Compile Include="SnakeGameLogic.cs" />
+    <Compile Include="ConsoleRenderer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
