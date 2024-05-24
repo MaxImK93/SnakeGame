@@ -9,5 +9,7 @@ namespace SnakeGame
 
         public abstract void Draw(ConsoleRenderer renderer);
 
+        public abstract bool IsDone();
+
     }
 }

@@ -43,6 +43,7 @@
     <Compile Include="BaseGameLogic.cs" />
     <Compile Include="SnakeGameLogic.cs" />
     <Compile Include="ConsoleRenderer.cs" />
+    <Compile Include="ShowTextState.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

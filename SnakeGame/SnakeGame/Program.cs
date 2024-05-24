@@ -5,14 +5,14 @@ namespace SnakeGame
 {
     class Program
     {
-        public const float targetFrameTime = 1f / 60f;
+        private const float targetFrameTime = 1f / 60f;
 
         public static void Main(string[] args)
         {
 
             SnakeGameLogic gameLogic = new SnakeGameLogic();
 
-            var pallette = gameLogic.CreatePalette();
+            ConsoleColor[] pallette = gameLogic.CreatePalette();
 
             ConsoleRenderer renderer0 = new ConsoleRenderer(pallette);
             ConsoleRenderer renderer1 = new ConsoleRenderer(pallette);
@@ -45,7 +45,7 @@ namespace SnakeGame
 
                 var nextFrameTime = frameStartTime + TimeSpan.FromSeconds(targetFrameTime);
 
-                var endFrameTime = DateTime.Now;
+                DateTime endFrameTime = DateTime.Now;
 
                 if (nextFrameTime > endFrameTime)
                 {
